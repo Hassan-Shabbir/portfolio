@@ -1,0 +1,94 @@
+/* general page settings */
+body {
+    /* hide body and color it if it appears */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img {
+    height: 60px;
+}
+
+a {
+    color: #333333;
+}
+
+/* general page settings */
+.page {
+    /* fill screen with div */
+    min-height: 100vh;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: grid;
+    align-content: center;
+    grid-row-gap: 3vh;
+}
+
+.page > * {
+    /* don't show body between divs */
+    margin-top: 0;
+}
+
+/* page specific settings */
+#page1 {
+    background-image: url("images/tor.jpg");
+}
+
+#page1 > * {
+    text-shadow: 1px 1px 3px #CCCCCC;
+}
+
+#page2 {
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #f2f2f2;
+    background-image: url("images/work.jpg");
+}
+
+#page3 {
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    background-image: url("images/light.jpg");
+}
+
+#page3 > * {
+    text-align: center;
+}
+#images > * {
+    padding: 0 1.5vw;
+}
+
+#break {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #images > * {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2vw 0;
+    }
+    #passion, #software {
+        grid-column: 1 / span 2;
+    }
+    #page2 {
+        padding-top: 50px;
+    }
+    #experience, #connect {
+        padding-top: 30px;
+        grid-column: 1 / span 2;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #break {
+        display: block;
+    }
+
+}
